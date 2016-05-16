@@ -1,22 +1,19 @@
-#adafruit mcp9808
-Here are the schemes to interface adafruit mcp9808 high sensivity temperature sensor (https://www.adafruit.com/product/1782)
-
-## With an arduino leonardo
-![arduino leonardo](/mcp9808/arduino-mcp9808_bb.png)
-
-## With a nodemcu (esp8266)
-![esp8266](/mcp9808/esp8266-mcp9808_bb.png)
-
-## Here is the code (upload with arduino IDE)
-Started with adafruit mcp9808 sample
-```
+/**************************************************************************/
+/*!
+This is a demo for the Adafruit MCP9808 breakout
+----> http://www.adafruit.com/products/1782
+Adafruit invests time and resources providing this open source code,
+please support Adafruit and open-source hardware by purchasing
+products from Adafruit!
+*/
+/**************************************************************************/
 
 #include <Wire.h>
 #include "Adafruit_MCP9808.h"
 
 // Create the MCP9808 temperature sensor object
 Adafruit_MCP9808 tempsensor = Adafruit_MCP9808();
-const int ledPin =  16; // built-in board led (2 also works with the other one)
+const int ledPin =  16;
 
 void setup() {
   Serial.begin(9600);
@@ -38,9 +35,9 @@ void loop() {
 
   // Read and print out the temperature, then convert to *F
   float c = tempsensor.readTempC();
-  float f = c * 9.0 / 5.0 + 32;
+  // f = c * 9.0 / 5.0 + 32;
   Serial.print("Temp: "); Serial.print(c); Serial.print("*C\t"); 
-  Serial.print(f); Serial.println("*F");
+  //Serial.print(f); Serial.println("*F");
   delay(250);
   
   Serial.println("Shutdown MCP9808.... ");
@@ -48,4 +45,3 @@ void loop() {
   digitalWrite(ledPin, LOW);
   delay(2000);
 }
-```
