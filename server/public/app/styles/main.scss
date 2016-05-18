@@ -1,0 +1,25 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size:14px;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+}
+
+.logo {
+	width: 49px;
+    margin-top: -14px;
+    margin-left: 0px;
+    border-radius: 4px;
+}
+
+.screen {
+}

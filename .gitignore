@@ -1,1 +1,5 @@
 /server/node_modules
+server/db
+server/public/.tmp
+server/public/dist
+server/public/node_modules
